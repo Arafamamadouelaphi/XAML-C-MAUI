@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="music.MainPage">
+
+   
+  <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" RowSpacing="15" Margin="30,0,30,30"
+  ColumnDefinitions="*,*,*">
+            <Button Grid.Column="0" Grid.Row="1" Margin="0,-50,0,0" HeightRequest="80" WidthRequest="80" CornerRadius="40" ImageSource="delete" BackgroundColor="White">
+  <Button.Shadow>
+     <Shadow Brush="#bcbcbc"
+   Offset="5,5"
+   Opacity="0.6"/>
+  </Button.Shadow>
+</Button>
+
+<!-- Like Button-->
+<Button Grid.Column="1" Grid.Row="1" Margin="0,-50,0,0" HeightRequest="110" WidthRequest="110" CornerRadius="55" BackgroundColor="#f858a4">
+  <Button.Shadow>
+    <Shadow Brush="#f8bcd9"
+    Offset="5,5"
+    Opacity="0.6"/>
+  </Button.Shadow>
+</Button>
+     
+     </Grid>
+       
+
+</ContentPage>
+

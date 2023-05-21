@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewList="clr-namespace:music.View"
+             Routing.Route="PageList"
+             x:Class="music.View.PagePrincpl"
+             Title="PagePrincpl">
+    <Grid>
+   <Grid.RowDefinitions>
+    <RowDefinition Height="Auto" />
+    <RowDefinition Height="Auto" />
+    <RowDefinition Height="Auto" />
+    <RowDefinition Height="Auto"/>
+    <RowDefinition Height="Auto"/>
+    <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+
+ <Grid >
+ <Label Text="Modifier" HorizontalOptions="End" TextColor="Red"></Label>
+
+ </Grid>
+        <Grid Grid.Row="1">
+            <Label Text="Bibliothèque" FontSize="30" Margin="10" FontAttributes="Bold" />
+
+        </Grid>
+        <Grid Grid.Row="2">
+<ScrollView>
+<StackLayout>
+            
+
+            <StackLayout Orientation="Horizontal" Padding="10" Spacing="5" VerticalOptions="Center">
+                <Image Source="playlist.png" HeightRequest="20" VerticalOptions="Center" />
+                <Label Text="Playlists" VerticalOptions="Center" Padding="0,0,200,0"/>
+                <Image Source="chevronright.png" HeightRequest="20" VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+            </StackLayout>
+            <BoxView BackgroundColor="LightGray" HeightRequest="0.5" />
+
+            <StackLayout Orientation="Horizontal" Padding="10" Spacing="5" VerticalOptions="Center">
+                <Image Source="micro.png" HeightRequest="20" VerticalOptions="Center" />
+                <Label Text="Artistes" VerticalOptions="Center" Padding="0,0,200,0" />
+                <Image Source="chevronright.png" HeightRequest="20" VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+            </StackLayout>
+            <BoxView BackgroundColor="LightGray" HeightRequest="0.5" />
+
+            <StackLayout Orientation="Horizontal" Padding="10" Spacing="5" VerticalOptions="Center">
+                <Image Source="albumicon.png" HeightRequest="20" VerticalOptions="Center" />
+                <Label Text="Albums" VerticalOptions="Center" Padding="0,0,200,0" />
+                <Image Source="chevronright.png" HeightRequest="20" VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+            </StackLayout>
+            <BoxView BackgroundColor="Black" HeightRequest="0.5" />
+
+            <StackLayout Orientation="Horizontal" Padding="10" Spacing="5" VerticalOptions="Center">
+                <Image Source="compilation.png" HeightRequest="20" VerticalOptions="Center" />
+                <Label Text="Compilations" VerticalOptions="Center" Padding="0,0,200,0"/>
+                <Image Source="chevronright.png" HeightRequest="20" VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+            </StackLayout>
+            <BoxView BackgroundColor="Black" HeightRequest="0.5" />
+        </StackLayout>
+</ScrollView>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Label Text="AJOUT RECENTS" Margin ="40" HorizontalOptions="Start" VerticalOptions="Start" TextColor="Black" FontSize="20"></Label>
+        </Grid>
+         <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+    <Grid Grid.Row="4" Margin="35" HeightRequest="300" WidthRequest="400" VerticalOptions="Start" HorizontalOptions="Start">
+    <CollectionView x:Name="Data">
+    <CollectionView.ItemsLayout>
+        <GridItemsLayout Orientation="Vertical" Span="2" />
+    </CollectionView.ItemsLayout>
+    <CollectionView.ItemTemplate>
+        <DataTemplate>
+            
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Image Source="{Binding Image}" WidthRequest="100" HeightRequest="100" 
+                           HorizontalOptions="Center" VerticalOptions="Start" Margin="60,0" />
+                    <StackLayout Grid.Row="1" Margin="10,0">
+                        <Label Text="{Binding Title}" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+                        <Label Text="{Binding Description}" HorizontalTextAlignment="Center" />
+                    </StackLayout>
+                </Grid>
+            
+        </DataTemplate>
+    </CollectionView.ItemTemplate>
+</CollectionView>
+
+</Grid>
+</Grid>
+ <Grid Grid.Row="5"  Margin="0 " HeightRequest="50"  VerticalOptions="End">
+            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        
+        <Image Source="poster_7.png"
+               Aspect="AspectFit"
+               HeightRequest="50"
+               WidthRequest="50"
+               Margin="10,0,0,0" />
+        
+        <StackLayout Grid.Column="1"
+                     Orientation="Vertical"
+                     VerticalOptions="Center">
+            <Label Text="Tithee of Hyatchinth"
+                   FontSize="Small" />
+        </StackLayout>        
+        <Image Grid.Column="2"
+               Source="play.png"
+                BackgroundColor="Transparent"
+                WidthRequest="40"
+                HeightRequest="40">
+            
+        </Image>
+        
+        <Image Grid.Column="3"
+              Source="play.png"
+                BackgroundColor="Transparent"
+                WidthRequest="40"
+                HeightRequest="40">
+            
+        </Image>
+    </Grid>
+
+
+
+        </Grid>
+
+
+</ContentPage>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="music.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:det="clr-namespace:music.View"
+    xmlns:mn="clr-namespace music"
+    xmlns:local="clr-namespace:music"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        
+    <ShellContent
+            
+        Title="Bibliotheque"
+        ContentTemplate="{DataTemplate det:Detail}"
+        Route="Detail" />
+    <ShellContent
+        Title="Recherche"
+        ContentTemplate="{DataTemplate det:PagePrincpl}"
+        Route="Detail" />
+         
+    
+    </TabBar>
+   
+    
+</Shell>
+

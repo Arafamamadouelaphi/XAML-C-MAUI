@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:music.View"
+             x:Class="music.View.Menu"
+             Title="Menu">
+    <ContentPage Title="ecouter"   BackgroundColor="Yellow"  >
+    </ContentPage>
+    <ContentPage Title="Explorer" ></ContentPage>
+    <ContentPage Title="Radia" ></ContentPage>
+    <pages:Detail Title="Detail"></pages:Detail>
+
+ 
+    <!--<ContentPage Title="Recherche"></ContentPage>-->
+</TabbedPage>

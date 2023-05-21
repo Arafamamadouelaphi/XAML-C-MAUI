@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="music.View.Detail"
+             Routing.Route="Detail"
+             Title="Detail"
+            >
+    <Grid>
+        <Grid.RowDefinitions>
+    <RowDefinition Height="Auto" />
+    <RowDefinition Height="Auto" />
+    <RowDefinition Height="Auto" />
+    <RowDefinition Height="*"/>
+    <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+        <Grid>
+           <ImageButton HeightRequest="30"  HorizontalOptions="Start" Source="chevron.png"></ImageButton>
+            <ImageButton HeightRequest="25" HorizontalOptions="Center" Source="vrai.png"></ImageButton>
+            <ImageButton HeightRequest="25"  HorizontalOptions="End" Source="trois.png"></ImageButton>
+        </Grid>
+    <Grid  Grid.Row="1"  >
+        <Image Source="poster_7.png" WidthRequest="300" HeightRequest="300"  ></Image>
+    </Grid>
+    <Grid Grid.Row="2" >
+        <Grid.RowDefinitions>
+        <RowDefinition  />
+        <RowDefinition />
+        <RowDefinition />
+        <RowDefinition />
+        </Grid.RowDefinitions>
+    <Label Text="Speak with evil(Ruby van " TextColor="Black"  HorizontalOptions="Center" VerticalOptions="End" FontSize="Body"  ></Label>
+    <Label Text="Gelder Edition)" TextColor="Black"  HorizontalOptions="Center" VerticalOptions="Start"   FontSize="Body" Grid.Row="1"></Label>
+    <Label Text="jazz 190000000000"  HorizontalOptions="Center" VerticalOptions="Start" Grid.Row="2" FontSize="Body" TextColor="Red"></Label>
+    </Grid>
+    <Grid Grid.Row="3">
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+        <Frame HeightRequest="30" WidthRequest="130"  BackgroundColor="Chocolate" Grid.Column="3" VerticalOptions="Start">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="mn.png" WidthRequest="80" HeightRequest="30" Margin="-20" VerticalOptions="Start" />
+                <Label Margin="0" VerticalOptions="Center"  Text="LECTURE" WidthRequest="120" HeightRequest="50" HorizontalTextAlignment="End" VerticalTextAlignment="Center" HorizontalOptions="Center" Grid.Column="1" TextColor="Red"/>
+    </Grid>
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer />
+            </Frame.GestureRecognizers >
+            </Frame>
+             <Frame HeightRequest="30" WidthRequest="135" Grid.Row="3" Grid.Column="6" BackgroundColor="Chocolate" VerticalOptions="Start" >
+    <Grid>
+                <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+            <Image Source="aleatoire.png" WidthRequest="50" HeightRequest="30"       Margin="-20" VerticalOptions="Start"/>
+            <Label Margin="0" Text="ALEATOIRE" WidthRequest="90" HeightRequest="50" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Column="1" TextColor="Red" />
+    </Grid>
+            <Frame.GestureRecognizers>
+            <TapGestureRecognizer />
+            </Frame.GestureRecognizers >
+            </Frame>
+    </Grid>
+    <Grid Grid.Row="4" BackgroundColor="White" Margin="2" HeightRequest="300" WidthRequest="500">
+      <CollectionView x:Name="DataList" Margin="39">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+           <Grid>
+                <Grid.ColumnDefinitions>
+                 <ColumnDefinition/>
+                 <ColumnDefinition/>
+                 <ColumnDefinition/>
+                 <ColumnDefinition/>
+                 <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding ImageUrl}" WidthRequest="55"
+                                        HeightRequest="15" VerticalOptions="Start"  />
+                <Label  Text="{Binding Id}" HorizontalOptions="Center" Grid.Column="1" HeightRequest="10" VerticalOptions="Start" />
+                    <Label Grid.Column="2" Text="{Binding Title}" HorizontalOptions="Center" HeightRequest="13" VerticalOptions="Start"/>
+                <Image Source="tele.png" WidthRequest="25" Grid.Column="4"
+                                        HeightRequest="25" HorizontalOptions="Start" VerticalOptions="Start"  />
+                <Image Source="trois.png" WidthRequest="125" Grid.Column="5"
+                        HeightRequest="25" HorizontalOptions="Start" VerticalOptions="Start"  /> 
+           </Grid>
+        </DataTemplate>
+    </CollectionView.ItemTemplate>
+</CollectionView>
+</Grid>
+<Grid Grid.Row="5"  Margin="0 " HeightRequest="50"  VerticalOptions="End" BackgroundColor="WhiteSmoke">
+            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+             <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        
+        <Image Source="poster_7.png"
+               Aspect="AspectFit"
+               HeightRequest="50"
+               WidthRequest="50"
+               Margin="0,0,0,0" />
+        
+        <StackLayout Grid.Column="1"
+                     Orientation="Vertical"
+                     VerticalOptions="Center">
+            <Label Text="Tithee of Hyatchinth"
+                   FontSize="Small" />
+        </StackLayout>        
+        <Image Grid.Column="2"
+               Source="play.png"
+               VerticalOptions="Center"
+               HorizontalOptions="Start"
+                BackgroundColor="Transparent"
+                WidthRequest="30"
+                HeightRequest="60">
+            
+        </Image>
+        
+        <Image Grid.Column="4"
+              Source="svt.png"
+              HorizontalOptions="End"
+                BackgroundColor="Transparent"
+                WidthRequest="40"
+                HeightRequest="40">
+            
+        </Image>
+    </Grid>
+
+
+
+        </Grid>
+</ContentPage>
